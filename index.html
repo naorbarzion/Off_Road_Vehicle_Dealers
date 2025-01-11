@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracer - טרייסר שטח</title>
+    
+    <!-- YouTube API - חייב להיות לפני שאר הסקריפטים -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+    
+    <!-- ספריות חיצוניות -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- קבצים מקומיים -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/device.css">
+    <link rel="stylesheet" href="css/features.css">
+    <link rel="stylesheet" href="css/why-sell.css">
+    <link rel="stylesheet" href="css/clients.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+<body class="font-rubik">
+    <!-- כאן יוכנסו הסקשנים -->
+    <div id="hero-section"></div>
+    <div id="device-section"></div>
+    <div id="features-section"></div>
+    <div id="why-sell-section"></div>
+    <div id="services-section"></div>
+    <div id="clients-section"></div>
+
+    <!-- Contact Section -->
+    <div id="contact">
+        <iframe src="components/contact.html" frameborder="0" width="100%" onload="this.style.height = this.contentWindow.document.documentElement.scrollHeight + 'px'"></iframe>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/hero.js"></script>
+    <script src="js/device.js"></script>
+    <script src="js/features.js"></script>
+    <script src="js/why-sell.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/clients.js"></script>
+    <script src="js/contact.js"></script>
+
+    <!-- Script לטעינת הקומפוננטות -->
+    <script>
+        // פונקציה לטעינת תוכן HTML
+        async function loadComponent(url, targetId) {
+            try {
+                const response = await fetch(url);
+                const html = await response.text();
+                document.getElementById(targetId).innerHTML = html;
+            } catch (error) {
+                console.error(`Error loading ${url}:`, error);
+            }
+        }
+
+        // טעינת כל הקומפוננטות
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponent('components/hero.html', 'hero-section');
+            loadComponent('components/device.html', 'device-section');
+            loadComponent('components/features.html', 'features-section');
+            loadComponent('components/why-sell.html', 'why-sell-section');
+            loadComponent('components/services.html', 'services-section');
+            loadComponent('components/clients.html', 'clients-section');
+        });
+    </script>
+</body>
+</html> 
