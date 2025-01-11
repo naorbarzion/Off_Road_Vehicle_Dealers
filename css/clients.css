@@ -1,0 +1,63 @@
+.clients-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.client-card {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    cursor: pointer;
+}
+
+.client-logo {
+    max-width: 100%;
+    height: auto;
+    max-height: 80px;
+    object-fit: contain;
+    filter: grayscale(1);
+    transform: rotate(0deg);
+    transition: transform 0.6s ease, filter 0.3s ease;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
+}
+
+.client-logo:hover {
+    filter: grayscale(0);
+    transform: rotate(360deg);
+}
+
+/* רספונסיביות */
+@media (max-width: 768px) {
+    .client-card {
+        height: 120px;
+        padding: 1.5rem;
+    }
+    
+    .client-logo {
+        max-height: 60px;
+    }
+}
+
+/* אנימציית כניסה */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+} 

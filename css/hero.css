@@ -1,0 +1,166 @@
+/* הגדרות בסיסיות */
+:root {
+    --color-orange: #FF8C00;
+    --color-yellow: #FFD700;
+    --color-sky: #87CEEB;
+    --color-tracer: #4DD8D8;
+    --color-wave: #D2691E;
+}
+
+/* עיצוב כללי */
+body {
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+}
+
+/* Hero Section */
+#hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+}
+
+/* וידאו רקע */
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+#youtube-player {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+}
+
+/* שכבת Overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.6) 0%,
+        rgba(0, 0, 0, 0.4) 50%,
+        rgba(210, 105, 30, 0.95) 100%
+    );
+    z-index: 2;
+}
+
+/* תוכן */
+.content-container {
+    position: relative;
+    z-index: 3;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+/* מעבר גלי בתחתית */
+.wave-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    line-height: 0;
+    transform: translateY(1px);
+    z-index: 20;
+}
+
+.wave-bottom svg {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    transform-origin: bottom;
+    animation: wave-animation 3s ease-in-out infinite alternate;
+}
+
+.wave-bottom path {
+    fill: #ffffff;
+    opacity: 0.95;
+    filter: drop-shadow(0 -4px 8px rgba(0,0,0,0.1));
+    transition: all 0.3s ease;
+}
+
+@keyframes wave-animation {
+    from {
+        transform: scaleY(1);
+    }
+    to {
+        transform: scaleY(1.1);
+    }
+}
+
+/* התאמות לטקסט */
+.hero-text {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* כפתור CTA */
+.cta-button {
+    background: #FF8C00;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1.25rem;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 140, 0, 0.3);
+}
+
+.cta-button:hover {
+    background: #FF7000;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 140, 0, 0.4);
+}
+
+/* התאמה למובייל */
+@media (max-width: 768px) {
+    .content-container {
+        padding: 1rem;
+    }
+
+    .hero-text {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .wave-bottom svg {
+        height: 60px;
+    }
+    
+    .wave-bottom {
+        transform: translateY(0.5px);
+    }
+}
+
+/* תיקון למעבר בין הסקשנים */
+#device {
+    position: relative;
+    margin-top: -2px; /* מתקן את הרווח */
+    background: #fff;
+    z-index: 5;
+} 

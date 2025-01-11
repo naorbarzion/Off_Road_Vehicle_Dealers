@@ -1,0 +1,54 @@
+/* הגדרות בסיסיות */
+:root {
+    --color-orange: #FF8C00;
+    --color-yellow: #FFD700;
+    --color-brown: #D2691E;
+}
+
+/* עיצוב כללי */
+#why-sell {
+    position: relative;
+    overflow: hidden;
+}
+
+/* תיבת מחיר */
+.price-box {
+    background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+    border: 1px solid rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.price-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* תג מומלץ */
+.recommended-badge {
+    z-index: 10;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 140, 0, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(255, 140, 0, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 140, 0, 0);
+    }
+}
+
+/* התאמה למובייל */
+@media (max-width: 768px) {
+    .price-box {
+        margin: 2rem 0;
+    }
+    
+    .recommended-badge {
+        top: 1rem;
+        right: 1rem;
+    }
+} 
