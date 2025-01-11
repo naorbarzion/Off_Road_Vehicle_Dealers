@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Section</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- SweetAlert2 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/contact.css">
+</head>
+<body>
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title">מעוניינים בפרטים נוספים?</h2>
+            <p class="section-description">
+                השאירו לנו פרטים וסמנכ"ל הפרוייקטים הארצי שלנו יחזור אליכם
+            </p>
+
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <div class="input-wrapper">
+                        <i class="fas fa-user input-icon"></i>
+                        <input type="text" 
+                               id="name" 
+                               name="name" 
+                               required 
+                               placeholder="שם משווק"
+                               class="form-input">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="input-wrapper">
+                        <i class="fas fa-phone input-icon"></i>
+                        <input type="tel" 
+                               id="phone" 
+                               name="phone" 
+                               required 
+                               placeholder="טלפון"
+                               class="form-input">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="input-wrapper">
+                        <i class="fas fa-envelope input-icon"></i>
+                        <input type="email" 
+                               id="email" 
+                               name="email" 
+                               required 
+                               placeholder="מייל"
+                               class="form-input">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="input-wrapper">
+                        <i class="fas fa-message input-icon"></i>
+                        <textarea id="message" 
+                                  name="message" 
+                                  placeholder="הודעה"
+                                  class="form-input h-32"></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    <span>שליחה</span>
+                    <i class="fas fa-paper-plane ms-2"></i>
+                </button>
+            </form>
+
+            <!-- Modern 2025 Icon -->
+            <div class="modern-icon">
+                <i class="fas fa-rocket"></i>
+                <div class="icon-glow"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/contact.js"></script>
+</body>
+</html> 

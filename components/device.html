@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Device Section</title>
+</head>
+<body>
+    <!-- Device Section -->
+    <section id="device" class="relative min-h-screen w-full bg-white py-20">
+        <div class="container mx-auto px-4">
+            <!-- חלק ראשון - מידע כללי -->
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-12 mb-20">
+                <!-- טקסט מצד ימין -->
+                <div class="lg:w-1/2 text-content">
+                    <h2 class="text-4xl lg:text-5xl font-bold mb-6 text-[#D2691E]">
+                        <div class="mb-2">הפתרון המתקדם בישראל</div>
+                        <div>לניטור כלי שטח</div>
+                    </h2>
+                    <div class="text-lg lg:text-xl leading-relaxed space-y-6 text-gray-700">
+                        <p>
+                            מערכת טרייסר שטח הינה פיתוח ישראלי שהותאמה במיוחד לכלי שטח כמו רייזרים, טרקטורונים וכו׳.
+                        </p>
+                        <p>
+                            מהיום – אתם בשליטה מלאה על הכלים שלכם. יודעים איפה הם בכל זמן, באיזה מהירות הם נוסעים ועוד, עם מוקד התראות טלפוני ו-WhatsApp שמעניק לכם שקט נפשי וביטחון מוחלט.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- צד שמאל עם המכשיר וההתראות -->
+                <div class="lg:w-1/2 device-left-side" data-aos="fade-up">
+                    <div class="device-container">
+                        <img src="https://i.ibb.co/w75SxvZ/GPS1-1-2-removebg-preview-removebg-preview.png" 
+                             alt="מכשיר טרייסר" 
+                             class="device-image mx-auto">
+                        
+                        <!-- התראות -->
+                        <div class="notifications">
+                            <!-- התראת שיחה נכנסת -->
+                            <div class="notification incoming-call">
+                                <div class="notification-content">
+                                    <div class="incoming-call-header">
+                                        <div class="incoming-call-icon">
+                                            <i class="fas fa-phone"></i>
+                                        </div>
+                                        <div class="incoming-call-info">
+                                            <div class="incoming-call-title">מוקד התראות טרייסר</div>
+                                            <div class="incoming-call-subtitle">התראה על גניבה</div>
+                                        </div>
+                                    </div>
+                                    <div class="incoming-call-actions">
+                                        <button class="call-action decline">
+                                            <i class="fas fa-phone-slash"></i>
+                                        </button>
+                                        <button class="call-action accept">
+                                            <i class="fas fa-phone"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- התראת וואטסאפ -->
+                            <div class="notification">
+                                <div class="notification-icon whatsapp">
+                                    <i class="fab fa-whatsapp"></i>
+                                </div>
+                                <div class="notification-content">
+                                    <div class="notification-title">התראת WhatsApp</div>
+                                    <div class="notification-text">התראה על חיישן רטט</div>
+                                </div>
+                                <div class="notification-time">עכשיו</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- חלק שני - המכשירים שלנו -->
+            <div class="pt-20 border-t border-gray-200">
+                <h2 class="text-4xl lg:text-5xl font-bold mb-12 text-center text-[#D2691E]">המכשירים שלנו</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                    <!-- מכשיר ראשון -->
+                    <div class="flex flex-col md:flex-row gap-8 items-center">
+                        <div class="w-full md:w-1/2">
+                            <img src="https://i.ibb.co/w75SxvZ/GPS1-1-2-removebg-preview-removebg-preview.png" 
+                                 alt="מכשיר טרייסר" 
+                                 class="w-full h-auto object-contain device-image">
+                        </div>
+                        <div class="w-full md:w-1/2 space-y-6">
+                            <h3 class="text-2xl font-bold text-[#D2691E]">מכשיר GPS</h3>
+                            <ul class="space-y-4">
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-battery-full text-[#FF8C00] mt-1"></i>
+                                    <span>סוללה חזקה - 10,000 מיליאמפר</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-bell text-[#FF8C00] mt-1"></i>
+                                    <span>חיישן רטט רגיש במיוחד</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-magic text-[#FF8C00] mt-1"></i>
+                                    <span>ללא צורך בהתקנה</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-plug-circle-xmark text-[#FF8C00] mt-1"></i>
+                                    <span>ללא חיווט למצבר \ כבלים</span>
+                                </li>
+                            </ul>
+                            <a href="https://tracer.co.il/wp-content/uploads/2024/12/LL01-0613.pdf" 
+                               target="_blank" 
+                               class="inline-block bg-[#FF8C00] text-white px-6 py-3 rounded-lg hover:bg-[#D2691E] transition-colors">
+                                מפרט טכני מלא
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- מכשיר חדש - VL808 -->
+                    <div class="flex flex-col md:flex-row gap-8 items-center">
+                        <div class="w-full md:w-1/2">
+                            <img src="https://tracer.co.il/wp-content/uploads/2024/12/VL808.png" 
+                                 alt="VL808" 
+                                 class="w-full h-auto object-contain device-image"
+                                 loading="lazy">
+                        </div>
+                        <div class="w-full md:w-1/2 space-y-6">
+                            <h3 class="text-2xl font-bold text-[#D2691E]">VL808</h3>
+                            <ul class="space-y-4">
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-shield-alt text-[#FF8C00] mt-1"></i>
+                                    <span>RFID אימובילייזר</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-bolt text-[#FF8C00] mt-1"></i>
+                                    <span>מתח פעולה: 9-90 וולט</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-key text-[#FF8C00] mt-1"></i>
+                                    <span>הנעה עם מחזיק RFID או מדבקה לטלפון</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-power-off text-[#FF8C00] mt-1"></i>
+                                    <span>יכולת השבתת כלי מרחוק</span>
+                                </li>
+                            </ul>
+                            <a href="https://tracer.co.il/wp-content/uploads/2024/12/2024.VL808-Leaflet_en.pdf" 
+                               target="_blank" 
+                               class="inline-block bg-[#FF8C00] text-white px-6 py-3 rounded-lg hover:bg-[#D2691E] transition-colors">
+                                מפרט טכני מלא
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
